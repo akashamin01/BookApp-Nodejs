@@ -1,0 +1,30 @@
+<!-- // add your code here -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Delete a Book</h3>
+            <ul class="nav nav-pills">
+                <li><a href="/home">List All Books</a></li>
+                <li><a href="/create">Create a Book</a></li>
+                <li class="active"><a href="/delete">Delete a Book</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+            <p style="color: red;"><%= message %></p>
+        </div>
+        <div class="container">
+            <form action="http://127.0.0.1:3000/delete" method="post" id="deleteABook">
+                <div class="form-group">
+                    <input type="number" class="form-control" name="bookId" placeholder="Enter a Book ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Delete</button>        
+            </form>         
+        </div>              
+    </body>
+</html>
